@@ -10,7 +10,7 @@ let fuggvenyFut = true
 function downMove() {
   let id = null;
   clearInterval(id);
-  id = setInterval(frame, 7);
+  id = setInterval(frame, 10);
   function frame() {
      if (fuggvenyFut == false) {
         clearInterval(id);
@@ -42,7 +42,7 @@ function upMove() {
   let id = null;
   const elem = document.getElementById("solar-system");   
   clearInterval(id);
-  id = setInterval(frame, 7);
+  id = setInterval(frame, 10);
   function frame() {
      if (fuggvenyFut == false) {
         clearInterval(id);
@@ -63,7 +63,7 @@ function rightMove() {
   let id = null;
   const elem = document.getElementById("solar-system");   
   clearInterval(id);
-  id = setInterval(frame, 7);
+  id = setInterval(frame, 10);
   function frame() {
      if (fuggvenyFut == false) {
         clearInterval(id);
@@ -84,7 +84,7 @@ function leftMove() {
   let id = null;
   const elem = document.getElementById("solar-system");   
   clearInterval(id);
-  id = setInterval(frame, 7);
+  id = setInterval(frame, 10);
   function frame() {
      if (fuggvenyFut == false) {
         clearInterval(id);
@@ -104,7 +104,7 @@ function upRightMove() {
   let id = null;
   const elem = document.getElementById("solar-system");   
   clearInterval(id);
-  id = setInterval(frame, 7);
+  id = setInterval(frame, 10);
   function frame() {
      if (fuggvenyFut == false) {
         clearInterval(id);
@@ -128,7 +128,7 @@ function downRightMove() {
   let id = null;
   const elem = document.getElementById("solar-system");   
   clearInterval(id);
-  id = setInterval(frame, 7);
+  id = setInterval(frame, 10);
   function frame() {
      if (fuggvenyFut == false) {
         clearInterval(id);
@@ -152,7 +152,7 @@ function downLeftMove() {
   let id = null;
   const elem = document.getElementById("solar-system");   
   clearInterval(id);
-  id = setInterval(frame, 7);
+  id = setInterval(frame, 10);
   function frame() {
      if (fuggvenyFut == false) {
         clearInterval(id);
@@ -176,7 +176,7 @@ function upLeftMove() {
   let id = null;
   const elem = document.getElementById("solar-system");   
   clearInterval(id);
-  id = setInterval(frame, 7);
+  id = setInterval(frame, 10);
   function frame() {
      if (fuggvenyFut == false) {
         clearInterval(id);
