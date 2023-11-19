@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+  </head>
+  
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  background-color: red;
+}
+
+#mutyur {
+  width: 5px;
+  height: 5px;
+  background-color: white;
+  position: relative;
+  animation: mutyur 2s linear infinite;
+}
+
+@keyframes mutyur {
+  0%   {background-color:white; left:1px; top:1px;}
+  25%  {background-color:pink; left:45px; top:1px;}
+  50%  {background-color:blue; left:45px; top:45px;}
+  75%  {background-color:green; left:1px; top:45px;}
+  100% {background-color:red; left:1px; top:1px;}
+}
+</style>
+<body>
+
+<p><button onclick="">Click Me</button></p> 
+
+<div id ="container">
+  <div id ="animate">
+  	<div id="mutyur"></div>
+  </div>
+  <div id ="up">
+  </div>
+  <div id ="right">
+  </div>
+  <div id ="down">
+  </div>
+  <div id ="left">
+  </div>
+  <div id ="upRight">
+  </div>
+  <div id ="downRight">
+  </div>
+  <div id ="downLeft">
+  </div>
+  <div id ="upLeft">
+  </div>
+  
+</div>
+
+<script>
+const elem = document.getElementById("animate");
+let xAxis = 0;
+let yAxis = 200;
+elem.style.top = yAxis + "px";
+elem.style.left = xAxis + "px";
+let fuggvenyFut = true
+
+function downMove() {
+  let id = null;
+  clearInterval(id);
+  id = setInterval(frame, 10);
+  function frame() {
+     if (fuggvenyFut == false) {
+        clearInterval(id);
+        fuggvenyFut = true;
+       return fuggvenyFut;
+      } else {
+        yAxis++; 
+        elem.style.top = yAxis + "px";
+        return yAxis;
+        } 
+  }
+  
+  return yAxis;
+}
+  
+function stopMove() {
+  fuggvenyFut = false;
+  const elem = document.getElementById("animate");
+  elem.style.top = yAxis + "px";
+  elem.style.left = xAxis + "px";
+  console.log("működik a stopMove");
+  return fuggvenyFut
+}
+
+
+
+
+function upMove() {
+  let id = null;
+  const elem = document.getElementById("animate");   
+  clearInterval(id);
+  id = setInterval(frame, 10);
+  function frame() {
+     if (fuggvenyFut == false) {
+        clearInterval(id);
+        fuggvenyFut = true;
+       return fuggvenyFut;
+      } else {
+        yAxis--; 
+        elem.style.top = yAxis + "px"; 
+        /*elem.style.left = yAxis + "px";*/
+        return yAxis;
+        } 
+  }
+  
+  return yAxis;
+}
+  
+function rightMove() {
+  let id = null;
+  const elem = document.getElementById("animate");   
+  clearInterval(id);
+  id = setInterval(frame, 10);
+  function frame() {
+     if (fuggvenyFut == false) {
+        clearInterval(id);
+        fuggvenyFut = true;
+       return fuggvenyFut;
+      } else {
+        xAxis++;  
+        elem.style.left = xAxis + "px";
+        return xAxis;
+        } 
+  }
+  
+  return xAxis;
+}
+  
+    
+function leftMove() {
+  let id = null;
+  const elem = document.getElementById("animate");   
+  clearInterval(id);
+  id = setInterval(frame, 10);
+  function frame() {
+     if (fuggvenyFut == false) {
+        clearInterval(id);
+        fuggvenyFut = true;
+       return fuggvenyFut;
+      } else {
+        xAxis--;  
+        elem.style.left = xAxis + "px";
+        return xAxis;
+        } 
+  }
+  
+  return xAxis;
+}
+  
+function upRightMove() {
+  let id = null;
+  const elem = document.getElementById("animate");   
+  clearInterval(id);
+  id = setInterval(frame, 10);
+  function frame() {
+     if (fuggvenyFut == false) {
+        clearInterval(id);
+        fuggvenyFut = true;
+       return fuggvenyFut;
+      } else {
+        xAxis++;
+        yAxis--;
+        elem.style.left = xAxis + "px";
+        elem.style.top = yAxis + "px";
+        return xAxis;
+        return yAxis;
+        } 
+  }
+  
+  return xAxis;
+  return yAxis;
+}
+  
+function downRightMove() {
+  let id = null;
+  const elem = document.getElementById("animate");   
+  clearInterval(id);
+  id = setInterval(frame, 10);
+  function frame() {
+     if (fuggvenyFut == false) {
+        clearInterval(id);
+        fuggvenyFut = true;
+       return fuggvenyFut;
+      } else {
+        xAxis++;
+        yAxis++;
+        elem.style.left = xAxis + "px";
+        elem.style.top = yAxis + "px";
+        return xAxis;
+        return yAxis;
+        } 
+  }
+  
+  return xAxis;
+  return yAxis;
+}
+  
+function downLeftMove() {
+  let id = null;
+  const elem = document.getElementById("animate");   
+  clearInterval(id);
+  id = setInterval(frame, 10);
+  function frame() {
+     if (fuggvenyFut == false) {
+        clearInterval(id);
+        fuggvenyFut = true;
+       return fuggvenyFut;
+      } else {
+        xAxis--;
+        yAxis++;
+        elem.style.left = xAxis + "px";
+        elem.style.top = yAxis + "px";
+        return xAxis;
+        return yAxis;
+        } 
+  }
+  
+  return xAxis;
+  return yAxis;
+}
+  
+function upLeftMove() {
+  let id = null;
+  const elem = document.getElementById("animate");   
+  clearInterval(id);
+  id = setInterval(frame, 10);
+  function frame() {
+     if (fuggvenyFut == false) {
+        clearInterval(id);
+        fuggvenyFut = true;
+       return fuggvenyFut;
+      } else {
+        xAxis--;
+        yAxis--;
+        elem.style.left = xAxis + "px";
+        elem.style.top = yAxis + "px";
+        return xAxis;
+        return yAxis;
+        } 
+  }
+  
+  return xAxis;
+  return yAxis;
+}
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</body>
+</html>
+
+
+CSS:
+
+#down {
+  background-color: black;
+  position: absolute;
+  bottom: 0px;
+  height: 20px;
+  width: 100%;
+}
+
+#up {
+  background-color: black;
+  position: absolute;
+  top: 0px;
+  height: 20px;
+  width: 100%;
+}
+
+#right {
+  background-color: black;
+  position: absolute;
+  top:0px;
+  left: 400px;
+  height: 400px;
+  width: 20px;
+}
+
+#left {
+  background-color: black;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 400px;
+  width: 20px;
+}
+
+#upRight {
+  background-color: blue;
+  position: absolute;
+  left: 370px;
+  top: 0px;
+  height: 50px;
+  width: 50px;
+}
+
+#downRight {
+  background-color: blue;
+  position: absolute;
+  left: 370px;
+  top: 350px;
+  height: 50px;
+  width: 50px;
+}
+
+#downLeft {
+  background-color: blue;
+  position: absolute;
+  left: 0px;
+  top: 350px;
+  height: 50px;
+  width: 50px;
+}
+
+#upLeft {
+  background-color: blue;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 50px;
+  width: 50px;
+}
+
+
+JS:
+
+$(document).ready(function() {
+  $("#down").hover(downMove,stopMove);
+  $("#up").hover(upMove,stopMove);
+  $("#right").hover(rightMove,stopMove);
+  $("#left").hover(leftMove,stopMove);
+  $("#upRight").hover(upRightMove,stopMove);
+  $("#downRight").hover(downRightMove,stopMove);
+  $("#downLeft").hover(downLeftMove,stopMove);
+  $("#upLeft").hover(upLeftMove,stopMove);
+});
